@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Currency convert = new Currency();
+        CurrencyIml convert = new CurrencyIml();
 
         System.out.println("Выберите валюту для перевода: 1. USD 2. RUB 3. EUR");
         int from = input.nextInt();
