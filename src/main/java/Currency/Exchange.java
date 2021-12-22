@@ -1,8 +1,6 @@
+package Currency;
 
-public interface Currency {
-    double EUR = 0.88;
-    double USD = 1;
-    double RUB = 60;
+public interface Exchange {
 
      double toEUR( int from, double count);
      double toUSD( int from, double count);

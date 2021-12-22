@@ -1,13 +1,19 @@
-public class CurrencyIml implements Currency {
+package Currency;
+
+import static Currency.Currency.*;
+
+public class ExchangeIml implements Exchange {
+
+    CurrencyIml currency = new CurrencyIml();
 
     public double toEUR(int from, double count) {
         double result;
         switch (from) {
             case (1):
-                result = EUR * USD * count;
+                result = currency.getEUR(EUR) * currency.getUSD(USD) * count;
                 break;
             case (2):
-                result = EUR / RUB * count;
+                result = currency.getEUR(EUR) / currency.getRUB(RUB) * count;
                 break;
             default:
                 return count;
@@ -19,10 +25,10 @@ public class CurrencyIml implements Currency {
         double result;
         switch (from) {
             case (3):
-                result = EUR * USD * count;
+                result = currency.getEUR(EUR)  * currency.getUSD(USD)  * count;
                 break;
             case (2):
-                result = USD / RUB * count;
+                result = currency.getUSD(USD)  / currency.getRUB(RUB) * count;
                 break;
             default:
                 return count;
@@ -34,10 +40,10 @@ public class CurrencyIml implements Currency {
         double result;
         switch (from) {
             case (1):
-                result = RUB * USD * count;
+                result = currency.getRUB(RUB)  * currency.getUSD(USD)  * count;
                 break;
             case (3):
-                result = EUR * RUB * count;
+                result = currency.getEUR(EUR)  * RUB * count;
                 break;
             default:
                 return count;
